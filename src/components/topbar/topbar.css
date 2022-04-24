@@ -34,6 +34,14 @@
   color: #555;
 }
 
+.topbarIconDesc {
+  position: relative;
+  height: 2em;
+  top: -6px;
+  align-items: center;
+  justify-content: center;
+}
+
 .topIconBadge{
     width: 15px;
     height: 15px;

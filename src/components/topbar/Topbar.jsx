@@ -1,27 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./topbar.css";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+
+import 'dotenv/config'
+import axios from "axios";
 import { NotificationsNone, Language, Settings } from "@material-ui/icons";
 
+const apiURL = "http://airquality-g3.herokuapp.com/sensor";
+
 export default function Topbar() {
+  const [location, setLocation] = useState(null);
+
+  useEffect(() => {
+    axios.get(apiURL).then((response) => {
+      setLocation(response.data.at(0).loc);
+    });
+  }, []);
+
+  if (!location) return null;
+
   return (
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">lamaadmin</span>
+          <span className="logo">Air Quality Dashboard 💨</span>
         </div>
         <div className="topRight">
           <div className="topbarIconContainer">
-            <NotificationsNone />
-            <span className="topIconBadge">2</span>
+            <LocationOnIcon style={{ color: 'red' }} />
+            <span className="topbarIconDesc">{location}, Indonesia</span>
           </div>
-          <div className="topbarIconContainer">
-            <Language />
-            <span className="topIconBadge">2</span>
-          </div>
-          <div className="topbarIconContainer">
-            <Settings />
-          </div>
-          <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="topAvatar" />
         </div>
       </div>
     </div>
