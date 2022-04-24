@@ -18,34 +18,47 @@
     font-size: 20px;
 }
 
-.featuredMoneyContainer{
+.featuredMeasurementContainer{
     margin: 10px 0px;
     display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
-.featuredMoney{
-    font-size: 30px;
+.featuredTempIcon{
+    margin-left: 1px;
+    color: #cb1e21;
+}
+
+.featuredHumIcon{
+    margin-left: 1px;
+    color: #1e66cb;
+}
+
+.featuredPressIcon{
+    margin-left: 1px;
+    color: #1ecbc8;
+}
+
+.featuredMeasurement{
+    font-size: 50px;
     font-weight: 600;
 }
 
-.featuredMoneyRate{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
+.featuredMeasurementUnit{
+    text-align: right;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.featuredIcon{
-    font-size: 14px;
-    margin-left: 5px;
-    color: green;
+.featuredLastTimeUpdateContainer{
+    display: flex; 
+    justify-content: flex-end;
 }
 
-.featuredIcon.negative{
-    color: red;
-}
-
-.featuredSub{
+.featuredLastTimeUpdate{
     font-size: 15px;
     color: gray;
 }
