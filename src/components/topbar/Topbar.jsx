@@ -4,7 +4,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 import axios from "axios";
 
-const apiURL = "http://airquality-g3.herokuapp.com/sensor";
+const apiURL = "https://airquality-g3.herokuapp.com/sensor";
 
 export default function Topbar() {
   const [location, setLocation] = useState(null);

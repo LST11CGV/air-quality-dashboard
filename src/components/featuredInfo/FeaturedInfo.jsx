@@ -7,7 +7,7 @@ import WavesIcon from '@mui/icons-material/Waves';
 
 import axios from "axios";
 
-const apiURL = "http://airquality-g3.herokuapp.com/condition";
+const apiURL = "https://airquality-g3.herokuapp.com/condition";
 
 export default function FeaturedInfo() {
   const [temperature, setTemperature] = useState(null);

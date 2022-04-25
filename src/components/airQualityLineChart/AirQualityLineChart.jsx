@@ -11,7 +11,7 @@ import {
 
 import axios from "axios";
 
-const apiURL = "http://airquality-g3.herokuapp.com/composition";
+const apiURL = "https://airquality-g3.herokuapp.com/composition";
 
 export default function AirQualityLineChart({ title, data, dataKey, grid }) {
 
