@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./product.css";
-import Chart from "../../components/chart/Chart"
+import AirQualityLineChart from "../../components/airQualityLineChart/AirQualityLineChart";
 import {productData} from "../../dummyData"
 import { Publish } from "@material-ui/icons";
 
@@ -15,7 +15,7 @@ export default function Product() {
       </div>
       <div className="productTop">
           <div className="productTopLeft">
-              <Chart data={productData} dataKey="Sales" title="Sales Performance"/>
+              <AirQualityLineChart data={productData} dataKey="Sales" title="Sales Performance"/>
           </div>
           <div className="productTopRight">
               <div className="productInfoTop">
