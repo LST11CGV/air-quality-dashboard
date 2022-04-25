@@ -12,7 +12,7 @@ import NewProduct from "./pages/newProduct/NewProduct";
 
 function App() {
   return (
-    <Router basename="/air-quality-dashboard">
+    <Router>
       <Topbar />
       <div className="container">
         <Sidebar />
