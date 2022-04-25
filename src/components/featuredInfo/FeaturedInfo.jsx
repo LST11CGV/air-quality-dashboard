@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./featuredInfo.css";
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 import OpacityIcon from '@mui/icons-material/Opacity';
-import AirIcon from '@mui/icons-material/Air';
+import WavesIcon from '@mui/icons-material/Waves';
 
 import axios from "axios";
 
@@ -18,10 +18,9 @@ export default function FeaturedInfo() {
   useEffect(() => {
     axios.get(apiURL).then((response) => {
       // setLocation(response.data.at(0).loc);
-      console.log(response.data.at(-1));
-      setTemperature(Number((response.data.at(-1).temperature)).toFixed(2));
-      setHumidity(Number((response.data.at(-1).humidity)).toFixed(2));
-      setPressure(Number((response.data.at(-1).pressure)).toFixed(2));
+      setTemperature(Number(response.data.at(-1).temperature).toFixed(2));
+      setHumidity(Number(response.data.at(-1).humidity).toFixed(2));
+      setPressure(Number(response.data.at(-1).pressure).toFixed(2));
       setLastUpdate(new Date(response.data.at(-1).datetime));
     });
   }, []);
@@ -57,7 +56,7 @@ export default function FeaturedInfo() {
       <div className="featuredItem">
         <span className="featuredTitle">Pressure</span>
         <div className="featuredMeasurementContainer">
-          <AirIcon className="featuredPressIcon" style={{ fontSize: 80 }} />
+          <WavesIcon className="featuredPressIcon" style={{ fontSize: 80 }} />
           <span className="featuredMeasurement">{pressure}
             <span className="featuredMeasurementUnit">hPa</span>
           </span>
