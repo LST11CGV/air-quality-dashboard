@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./featuredInfo.css";
+import "./airConditionInfo.css";
 import ThermostatIcon from '@mui/icons-material/Thermostat';
 import OpacityIcon from '@mui/icons-material/Opacity';
 import WavesIcon from '@mui/icons-material/Waves';
@@ -9,7 +9,7 @@ import axios from "axios";
 
 const apiURL = "https://airquality-g3.herokuapp.com/condition";
 
-export default function FeaturedInfo() {
+export default function AirConditionInfo() {
   const [temperature, setTemperature] = useState(null);
   const [humidity, setHumidity] = useState(null);
   const [pressure, setPressure] = useState(null);

@@ -19,14 +19,12 @@ export default function AirQualityLineChart({ title, data, dataKey, grid }) {
 
   useEffect(() => {
     axios.get(apiURL).then((response) => {
-      console.log(response.data);
       setAirQualityList(response.data);
     });
   }, []);
 
   if (!airQualityList) return null;
   airQualityList.forEach(obj => createNewKey(obj));
-  console.log(airQualityList);
   
   return (
     <div className="chart">
