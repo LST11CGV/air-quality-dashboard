@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/air-quality-dashboard/static/css/main.6a5db67d.chunk.css",
+    "main.js": "/air-quality-dashboard/static/js/main.a6c885a2.chunk.js",
+    "main.js.map": "/air-quality-dashboard/static/js/main.a6c885a2.chunk.js.map",
+    "runtime-main.js": "/air-quality-dashboard/static/js/runtime-main.97790b16.js",
+    "runtime-main.js.map": "/air-quality-dashboard/static/js/runtime-main.97790b16.js.map",
+    "static/js/2.68663b43.chunk.js": "/air-quality-dashboard/static/js/2.68663b43.chunk.js",
+    "static/js/2.68663b43.chunk.js.map": "/air-quality-dashboard/static/js/2.68663b43.chunk.js.map",
+    "index.html": "/air-quality-dashboard/index.html",
+    "static/css/main.6a5db67d.chunk.css.map": "/air-quality-dashboard/static/css/main.6a5db67d.chunk.css.map",
+    "static/js/2.68663b43.chunk.js.LICENSE.txt": "/air-quality-dashboard/static/js/2.68663b43.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.97790b16.js",
+    "static/js/2.68663b43.chunk.js",
+    "static/css/main.6a5db67d.chunk.css",
+    "static/js/main.a6c885a2.chunk.js"
+  ]
+}
