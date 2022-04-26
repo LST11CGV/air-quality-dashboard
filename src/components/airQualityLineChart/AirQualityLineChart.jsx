@@ -43,5 +43,5 @@ export default function AirQualityLineChart({ title, data, dataKey, grid }) {
 
 function createNewKey (obj) {
   obj["PPM"] = Number((obj["comp"]).toFixed(2));
-  obj["Update Time"] = new Date(obj["datetime"]).toLocaleString("in-ID")
+  obj["Update Time"] = new Date(obj["datetime"]).toLocaleString("in-ID");
 }

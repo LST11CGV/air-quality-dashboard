@@ -2,7 +2,6 @@ import "./sidebar.css";
 import {
   LineStyle,
   Timeline,
-  PermIdentity,
   // BarChart,
 } from "@material-ui/icons";
 import AcUnitIcon from '@mui/icons-material/AcUnit';
@@ -17,24 +16,15 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
+              <li className="sidebarListItem active">
+                <LineStyle className="sidebarIcon" />
+                Home
+              </li>
             </Link>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Quick Menu</h3>
-          <ul className="sidebarList">
-            <Link to="/users" className="link">
+            <Link to="/chart" className="link">
               <li className="sidebarListItem">
-                <PermIdentity className="sidebarIcon" />
-                Users
+                <Timeline className="sidebarIcon" />
+                Chart
               </li>
             </Link>
           </ul>
@@ -42,14 +32,18 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">History</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <AcUnitIcon className="sidebarIcon" />
-              Environment Condition
-            </li>
-            <li className="sidebarListItem">
-              <AirIcon className="sidebarIcon" />
-              Air Quality
-            </li>
+            <Link to="/condition-history" className="link">
+              <li className="sidebarListItem">
+                <AcUnitIcon className="sidebarIcon" />
+                Environment Condition
+              </li>
+            </Link>
+            <Link to="/history" className="link">
+              <li className="sidebarListItem">
+                <AirIcon className="sidebarIcon" />
+                Air Quality
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
