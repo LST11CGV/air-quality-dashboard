@@ -1,10 +1,11 @@
 import AirQualityLineChart from "../../components/airQualityLineChart/AirQualityLineChart";
 import "./chart.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
+// import React, { useState, useEffect } from "react";
 
-import axios from "axios";
+// import axios from "axios";
 
-const apiURL = "https://airquality-g3.herokuapp.com/composition";
+// const apiURL = "https://airquality-g3.herokuapp.com/composition";
 
 export default function Chart() {
   return (
