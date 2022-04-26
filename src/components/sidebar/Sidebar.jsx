@@ -6,7 +6,7 @@ import {
 } from "@material-ui/icons";
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import AirIcon from '@mui/icons-material/Air';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -15,35 +15,53 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <Link to="/" className="link">
-              <li className="sidebarListItem active">
-                <LineStyle className="sidebarIcon" />
+            <li>
+              <NavLink
+              exact
+              to="/" 
+              className="sidebarListItem"
+              activeClassName="sidebarListItem.active active"
+              >
+                <LineStyle className="sidebarIcon"/>
                 Home
-              </li>
-            </Link>
-            <Link to="/chart" className="link">
-              <li className="sidebarListItem">
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                  to="/chart" 
+                  className="sidebarListItem"
+                  activeClassName="sidebarListItem.active active"
+              >
                 <Timeline className="sidebarIcon" />
                 Chart
-              </li>
-            </Link>
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">History</h3>
           <ul className="sidebarList">
-            <Link to="/condition-history" className="link">
-              <li className="sidebarListItem">
+            <li>
+              <NavLink
+                to="/condition-history" 
+                className="sidebarListItem"
+                activeClassName="sidebarListItem.active active"
+              >
+              
                 <AcUnitIcon className="sidebarIcon" />
                 Environment Condition
-              </li>
-            </Link>
-            <Link to="/history" className="link">
-              <li className="sidebarListItem">
+              </NavLink>
+            </li>
+            <li className="">
+              <NavLink
+                to="/history" 
+                className="sidebarListItem"
+                activeClassName="sidebarListItem.active active"
+              >
                 <AirIcon className="sidebarIcon" />
                 Air Quality
-              </li>
-            </Link>
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
